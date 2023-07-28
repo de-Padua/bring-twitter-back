@@ -1,36 +1,33 @@
 {
-    "name": "My YT Bookmarks",
+    "name": "Bring Twitter Back",
     "version": "0.1.0",
-    "description": "Saving timestamps in YT videos",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://*.youtube.com/*"],
+    "description": "A extension for users who didn't liked the new visual of twitter.",
+    "host_permissions": ["https://*.twitter.com/*"],
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
       {
-        "matches": ["https://*.youtube.com/*"],
+        "matches": ["https://*.twitter.com/*"],
         "js": ["contentScript.js"]
       }
     ],
     "web_accessible_resources": [
       {
         "resources": [
-          "assets/bookmark.png",
-          "assets/play.png",
-          "assets/delete.png",
-          "assets/save.png"
+          "assets/twitter_logo.png"
+         
         ],
-        "matches": ["https://*.youtube.com/*"]
+        "matches": ["https://*.twitter.com/*"]
       }
     ],
     "action": {
       "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
+        "16": "/assets/twitter_logo.png",
+        "24": "/assets//twitter_logo.png",
+        "32": "/assets//twitter_logo.png"
       },
-      "default_title": "My YT Bookmarks",
+      "default_title": "Bring Twitter Back",
       "default_popup": "popup.html"
     },
     "manifest_version": 3
